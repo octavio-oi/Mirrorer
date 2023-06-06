@@ -145,7 +145,10 @@ const handleCanvas = ({ target: image }) => {
 }
 
 const handleUpload = e => {
-	const file = e.target.files[0]
+  const typeAccepts = ["image/png", "image/jpg", "image/jpeg"]
+  const file = e.target.files[0]
+
+  if (!typeAccepts.includes(file.type)) { return }
 
   createImage({
     onload: handleCanvas,
