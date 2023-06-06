@@ -1,0 +1,126 @@
+/* Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Presets */
+html {color-scheme: dark light;}
+
+body {
+  font-family: Verdana;
+  font-weight: 600;
+  color: #F80;
+  display: grid; place-items: center;
+  grid-template-rows: auto 2rem;
+  min-height: 100vh;
+}
+
+/* Styling */
+.mirrorer {
+  position: relative;
+  width: 20rem; height: 20rem;
+}
+
+.dropbox, .carousel {
+  position: absolute; top: 0;
+  width: 100%; height: 100%;
+  padding: 0; border: 0;
+}
+
+.upload {
+  cursor: pointer;
+  display: grid; place-items: center;
+  width: 100%; height: 100%;
+  border: 5px dashed #F80;
+}
+
+.upload-text {
+  font-size: 2rem;
+  transition: font-size 300ms;
+}
+.upload:hover .upload-text {font-size: 2.2rem;}
+.upload:hover:active .upload-text {font-size: 2rem;}
+
+.load {
+  position: absolute; inset: 0;
+  width: 3rem; margin: auto;
+}
+
+.card-container {
+  position: relative;
+  width: 20rem; height: 20rem;
+}
+
+.card {
+  position: absolute;
+  top: 50%; left: 50%;
+  max-height: 20rem;
+  translate: -50% -50%;
+}
+.card:not(.select) {z-index: -1;}
+
+.card-img {
+  display: block;
+  max-height: 20rem;
+  margin-inline: auto;
+}
+
+.card-modal {
+  position: absolute;
+  inset: 0; margin: auto;
+  display: grid; place-items: center;
+  background: #0008; opacity: 0;
+  border: 1px solid #F80;
+  transition: opacity 300ms;
+}
+.card-modal:hover {opacity: 1;}
+
+.card-button {
+  cursor: pointer;
+  background: #F808;
+  padding: 0.5rem 1rem;
+  border: 1px solid #F80;
+}
+.card-button:hover {background: #F80;}
+
+.arrow-left, .arrow-right {
+  cursor: pointer;
+  position: absolute; top: 50%;
+  width: 3rem;
+  background: #F80;
+  padding: 1rem 0.75rem 1rem 1.25rem;
+  border-radius: 50%;
+  transition: padding 300ms;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  padding: 1rem 1.25rem 1rem 0.75rem;
+}
+.arrow-left:hover:active,
+.arrow-right:hover:active {
+  padding: 1rem 0.75rem 1rem 1.25rem;
+}
+
+.arrow-left {translate: -4rem -50%;}
+.arrow-right {translate: 21rem -50%; rotate: 180deg;}
+
+.credits {
+  justify-self: end;
+  padding-inline: 1rem;
+}
+
+.credits a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #888;
+}
+
+/* Components */
+.hidden {display: none;}
+
+.minimize {
+  top: calc(100% + 1rem);
+  height: 25%;
+}

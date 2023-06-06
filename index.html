@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="favicon.ico">
+    <title>Mirrorer</title>
+  </head>
+
+  <body>
+    <form class="mirrorer">
+      <fieldset class="dropbox">
+        <label class="upload">
+          <span class="upload-text">Upload Image</span>
+          <input class="hidden" type="file" accept=".png, .jpg">
+        </label>
+        <img class="load hidden" src="assets/load.svg" alt="load">
+      </fieldset>
+
+      <fieldset class="carousel hidden">
+        <img class="arrow-left" data-roll="left" src="assets/arrow.svg" alt="arrow-left">
+        <div class="card-container"></div>
+        <img class="arrow-right" data-roll="right" src="assets/arrow.svg" alt="arrow-right">
+      </fieldset>
+    </form>
+
+    <footer class="credits">
+      <a href="https://github.com/octavio-oi" target="_blank">Desenvolvido por Octavio-oi.</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
