@@ -58,7 +58,10 @@ body {
   max-height: 20rem;
   translate: -50% -50%;
 }
-.card:not(.select) {z-index: -1;}
+.card:not(.select) {
+  visibility: hidden;
+  z-index: -1;
+}
 
 .card-img {
   display: block;
